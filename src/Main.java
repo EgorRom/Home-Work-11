@@ -7,12 +7,18 @@ public class Main {
         }
     }
 
-    public static void currentYear(int y) {
-        if (y >= 2015) {
-            System.out.print("Установить обычную версию");
+    public static void currentYear(int y, int c) {
+        if (y >= 2015 && c == 0) {
+            System.out.println("Установить обычную версию для айфона");
 
+        } else if (y >= 2015 && c == 1) {
+            System.out.println("Установить обычную версию для смартфона");
+        } else if (y < 2015 && c == 0) {
+            System.out.println("Установить облегчённую версию для айфона");
+        } else if (y < 2015 && c == 1) {
+            System.out.println("Установить облегчённую версию для смартфона");
         } else {
-            System.out.print("Установить облегчённую версию");
+            System.out.println("К сожалению у нас нет приложения на ваше устройство");
         }
     }
 
@@ -24,7 +30,7 @@ public class Main {
         }
     }
 
-    public static int weWillSendItVia(int days) {
+    public static void weWillSendItVia(int days) {
         if (days <= 20) {
             System.out.println("1 день");
         } else if (days <= 60) {
@@ -35,7 +41,6 @@ public class Main {
         } else {
             System.out.println("Доставки не будет");
         }
-        return days;
     }
 
 
@@ -45,13 +50,14 @@ public class Main {
         checkingTheYear(year);
         System.out.println("Задание №2");
 
-        int clientDeviceYear = 2016;
+        int clientDeviceYear = 2011;
         int clientOs = 1;
-        currentYear(clientDeviceYear);
-        checkOs(clientOs);
+        currentYear(clientDeviceYear, clientOs);
 
         System.out.println("Задание №3");
         int deliveryDistance = 95;
+        int days = 0;
+
         weWillSendItVia(deliveryDistance);
 
 
