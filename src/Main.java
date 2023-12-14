@@ -22,14 +22,6 @@ public class Main {
         }
     }
 
-    public static void checkOs(int os) {
-        if (os == 0) {
-            System.out.println(" для айфона");
-        } else if (os == 1) {
-            System.out.println(" для смартфона");
-        }
-    }
-
     public static void weWillSendItVia(int days) {
         if (days <= 20) {
             System.out.println("1 день");
